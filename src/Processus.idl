@@ -1,0 +1,12 @@
+module CorbaApp {
+  interface Lamport {
+      void sendRequest(in long id,in long h);
+      void sendACK(in long id2Send);
+      void sendREL(in long id2Send);
+      void receiveMessage(in long id_rec, in long type, in long h_rec);
+      void enterSC();
+      void leftSC();
+      void demandeSC();
+      oneway void shutdown();
+  };
+};
